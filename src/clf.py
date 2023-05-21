@@ -1,3 +1,9 @@
+# Author: Mia Kuntz
+# Date hand-in: 24/5 - 2023
+
+# Description: This script is used for training a classifier on the data.
+# The script loads the data, fits the model and generates a classification report.
+
 # tensorflow
 import tensorflow as tf 
 # image processsing tools
@@ -158,3 +164,6 @@ def main():
 
 if __name__=="__main__":
     main() 
+
+# Command line argument: 
+# python3 src/clf.py
