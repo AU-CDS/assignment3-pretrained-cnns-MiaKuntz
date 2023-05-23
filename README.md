@@ -21,6 +21,7 @@ The GitHub repository contains four folders, namely the ```src``` folder, which 
 ## Data
 The data used in this assignment is the Indo Fashion dataset. This dataset contains 106,000 images spread across 15 categories pertaining to clothing items in Indian fashion.
 When downloaded, the main ```archive``` repository contains another folder called ”images”, in which three subfolders can be found: “train”, “test”, and “val”. Additionally does the ```archive``` folder contain metadata in the way of three JSON files. To download the data, please following this link:
+
 https://www.kaggle.com/datasets/validmodel/indo-fashion-dataset
 
 To access and prepare the data for use in the script, please; Create a user on the website, download the data, and import the data into the repository. I recommend first creating a new folder called “metadata” in which you can store the metadata JSON files. This should be in the same layer as the subfolders previously described. I thereafter recommend removing the ```images``` from the ```archive``` folder and from there delete the ```archive``` folder, as this only adds to unnecessary content in the repository. The data directory should now look like the following:
