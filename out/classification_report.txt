@@ -1,21 +1,21 @@
                       precision    recall  f1-score   support
 
-              blouse       0.29      0.67      0.40         3
-         dhoti_pants       0.44      0.33      0.38        12
-            dupattas       1.00      0.11      0.20         9
-               gowns       0.00      0.00      0.00         5
-           kurta_men       0.38      0.50      0.43        10
-leggings_and_salwars       0.25      0.33      0.29         6
-             lehenga       0.39      0.58      0.47        12
-         mojaris_men       1.00      0.29      0.44         7
-       mojaris_women       0.86      1.00      0.92        12
-       nehru_jackets       0.50      0.55      0.52        11
-            palazzos       1.00      0.38      0.55         8
-          petticoats       0.00      0.00      0.00        14
-               saree       0.52      0.62      0.57        21
-           sherwanis       0.00      0.00      0.00         8
-         women_kurta       0.24      0.75      0.36        12
+              blouse       1.00      1.00      1.00         7
+         dhoti_pants       0.00      0.00      0.00         3
+            dupattas       1.00      0.33      0.50         9
+               gowns       0.50      0.17      0.25         6
+           kurta_men       0.75      1.00      0.86         6
+leggings_and_salwars       0.67      0.55      0.60        11
+             lehenga       0.83      1.00      0.91         5
+         mojaris_men       1.00      0.67      0.80         6
+       mojaris_women       0.70      1.00      0.82         7
+       nehru_jackets       0.67      1.00      0.80         4
+            palazzos       0.67      0.80      0.73         5
+          petticoats       0.67      0.57      0.62         7
+               saree       0.67      0.89      0.76         9
+           sherwanis       1.00      0.38      0.55         8
+         women_kurta       0.28      0.71      0.40         7
 
-            accuracy                           0.44       150
-           macro avg       0.46      0.41      0.37       150
-        weighted avg       0.47      0.44      0.40       150
+            accuracy                           0.67       100
+           macro avg       0.69      0.67      0.64       100
+        weighted avg       0.73      0.67      0.65       100

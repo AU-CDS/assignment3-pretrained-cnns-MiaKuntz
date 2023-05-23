@@ -31,13 +31,24 @@ import sys
 sys.path.append(".")
 # plotting function
 import utils.plot_function as pf
+# shutil for moving files
+import shutil
 
 # defining function for loading data and generating images
 def load_data():
-    # loading json metadata files
-    test_df = pd.read_json(os.path.join("images", "metadata", "test_data.json"), lines=True)
-    train_df = pd.read_json(os.path.join("images", "metadata", "train_data.json"), lines=True)
-    val_df = pd.read_json(os.path.join("images", "metadata", "val_data.json"), lines=True)
+    # creating metadata directory
+    metadata_directory = os.path.join("archive", "images", "metadata")
+    os.makedirs(metadata_directory, exist_ok=True)
+    # moving json metadata files to metadata directory
+    json_files = ["test_data.json", "train_data.json", "val_data.json"]
+    for file in json_files:
+        source_path = os.path.join("archive", file)
+        target_path = os.path.join(metadata_directory, file)
+        shutil.move(source_path, target_path)
+    # loading json metadata files from new directory
+    test_df = pd.read_json(os.path.join(metadata_directory, "test_data.json"), lines=True)
+    train_df = pd.read_json(os.path.join(metadata_directory, "train_data.json"), lines=True)
+    val_df = pd.read_json(os.path.join(metadata_directory, "val_data.json"), lines=True)
     # generating settings for images
     train_datagen = ImageDataGenerator(horizontal_flip=True,
                                         rotation_range=20,
@@ -47,7 +58,7 @@ def load_data():
                                     rescale=1./255.
     )
     # setting image directory 
-    image_directory = os.path.join(".")
+    image_directory = os.path.join(".", "archive")
     # settings for sizes and batch
     batch_size = 32
     target_size = (224, 224)
