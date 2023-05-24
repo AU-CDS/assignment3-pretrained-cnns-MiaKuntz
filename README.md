@@ -27,7 +27,7 @@ https://www.kaggle.com/datasets/validmodel/indo-fashion-dataset
 To access and prepare the data for use in the script, please; Create a user on the website, download the data, and import the data into the repository. 
 
 ## Methods
-The following is a description of parts of my code where the additional explanation of my decisions on arguments and functions may be needed than what is otherwise provided in the code. 
+The following is a description of parts of my code where additional explanation of my decisions on arguments and functions may be needed than what is otherwise provided in the code. 
 
 To be able to classify and plot the accuracy of the model's predictions of the type of clothing mentioned in the dataset, I first read the data and generate images. Please note that the code makes a few changes in the structure of the ```archive``` folder, such as creating a new metadata subfolder in it, as well as moving the JSON files to this folder, and that the script was run on a sample of the dataset, and it is therefore recommended to do the same when running, as the data is quite extensive when included as a whole. This will of course affect how the model is training, along with the results of both the plots and the classification report but will still be able to show how the code is running. The code provided in the repository is without the sample.
 
