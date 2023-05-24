@@ -29,7 +29,7 @@ To access and prepare the data for use in the script, please; Create a user on t
 ## Methods
 The following is a description of parts of my code where additional explanation of my decisions on arguments and functions may be needed than what is otherwise provided in the code. 
 
-To be able to classify and plot the accuracy of the models’ predictions of the type of clothing mentioned in the dataset, I first read in the data and generate images. Please note that the code makes a few changes in the structure of the ```archive``` folder, and that the script was run on a sample of the dataset, and it is therefore recommended to do the same when running, as the data is quite extensive when included as a whole. This will of course affect how the model is training, along with the results of both the plots and the classification report but will still be able to show how the code is running. The code provided in the repository is without the sample.
+To be able to classify and plot the accuracy of the models’ predictions of the type of clothing mentioned in the dataset, I first read in the data and generate images. Please note that the code makes a few changes in the structure of the ```archive``` folder, such as creating a new metadata subfolder in it, as well as moving the JSON files to this folder, and that the script was run on a sample of the dataset, and it is therefore recommended to do the same when running, as the data is quite extensive when included as a whole. This will of course affect how the model is training, along with the results of both the plots and the classification report but will still be able to show how the code is running. The code provided in the repository is without the sample.
 
 I then load the pretrained CNN model VGG16, add new layers, compile, and fit the model on batches of image data. The model history created when fitting, along with use of the plotting function provided for this course, is then used to create two plots: Firstly, the loss curve, and then the accuracy curve. I am also able to use it to create a classification report, which I save for later inspection of results. 
 
@@ -37,7 +37,7 @@ I then load the pretrained CNN model VGG16, add new layers, compile, and fit the
 ### Prerequisites and packages
 To be able to reproduce and run this code, make sure to have Bash and Python3 installed on whichever device it will be run on. Please be aware that the published script was made and run on a MacBook Pro from 2017 with the MacOS Ventura package, and that all Python code was run successfully on version 3.11.1.
 
-The repository will need to be cloned to your device. Before running the code, please make sure that your Bash terminal is running from the repository; After, please run the following from the command line to install and update necessary packages:
+The repository will need to be cloned to your device. Before running the code, please make sure that your Bash terminal is running from the repository; Afterward, please run the following from the command line to install and update necessary packages:
 
     bash setup.sh
 
@@ -46,7 +46,7 @@ My system requires me to type “python3” in the beginning of my commands, and
 
     python3 src/clf.py
 
-This will active the script. When running, it will go through each of the functions in the order written in my main function. That is:
+This will activate the script. When running, it will go through each of the functions in the order written in my main function. That is:
 -	Processing and generating the data for each of the three ways the data has been split. The function will find the data in the ```image``` folder, where the steps on where and how to download it, yourself is described further up in the ReadMe. 
 -	Generating plots for both loss and accuracy and then saving these into a single image to the ```models``` folder.
 -	Creating a classification report and then saving this to the ```out``` folder.
